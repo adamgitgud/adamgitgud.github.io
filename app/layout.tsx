@@ -1,76 +1,76 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
+import './globals.css';
 
-const siteUrl = "https://adamgitgud.github.io";
-const title = "Adam Holmes — Technical Lead / Senior Software Engineer";
+const siteUrl = 'https://adamgitgud.github.io';
+const title = 'Adam Holmes — Technical Lead / Senior Software Engineer';
 const description =
-  "Technical Lead and backend/full-stack engineer with 15+ years of experience across TypeScript, Node.js, Python and React.";
+  'Technical Lead and backend/full-stack engineer with 15+ years of experience across TypeScript, Node.js, Python and React.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
-  alternates: { canonical: "/" },
-  icons: { icon: "/icon.png" },
+  alternates: { canonical: '/' },
+  icons: { icon: '/icon.png' },
   openGraph: {
-    type: "profile",
-    url: "/",
+    type: 'profile',
+    url: '/',
     title,
     description,
-    siteName: "Adam Holmes",
+    siteName: 'Adam Holmes',
     images: [
       {
-        url: "/og-v2.png",
+        url: '/og-v2.png',
         width: 1200,
         height: 630,
-        alt: "Adam Holmes — Technical Lead / Senior Software Engineer",
+        alt: 'Adam Holmes — Technical Lead / Senior Software Engineer',
       },
     ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title,
     description,
-    images: ["/og-v2.png"],
+    images: ['/og-v2.png'],
   },
   robots: {
     index: true,
     follow: true,
   },
 };
+
 const person = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Adam Holmes",
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Adam Holmes',
   url: siteUrl,
-  jobTitle: "Technical Lead / Senior Software Engineer",
+  jobTitle: 'Technical Lead / Senior Software Engineer',
   description,
   address: {
-    "@type": "PostalAddress",
-    addressLocality: "Cardiff",
-    addressRegion: "Wales",
-    addressCountry: "GB",
+    '@type': 'PostalAddress',
+    addressLocality: 'Cardiff',
+    addressRegion: 'Wales',
+    addressCountry: 'GB',
   },
-  sameAs: ["https://www.linkedin.com/in/ad-holmes"],
+  sameAs: ['https://www.linkedin.com/in/ad-holmes'],
   knowsAbout: [
-    "TypeScript",
-    "Node.js",
-    "NestJS",
-    "Python",
-    "Django",
-    "FastAPI",
-    "React",
-    "Java",
-    "Spring Boot",
-    "PostgreSQL",
-    "Distributed systems",
-    "Event-driven architecture",
+    'TypeScript',
+    'Node.js',
+    'NestJS',
+    'Python',
+    'Django',
+    'FastAPI',
+    'React',
+    'Java',
+    'Spring Boot',
+    'PostgreSQL',
+    'Distributed systems',
+    'Event-driven architecture',
   ],
-};
+} as const;
 
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en-GB">
       <body>
@@ -78,7 +78,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(person).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(person).replace(/</g, '\\u003c'),
           }}
         />
       </body>

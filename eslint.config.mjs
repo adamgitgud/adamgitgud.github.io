@@ -1,7 +1,7 @@
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
-import prettierRecommended from "eslint-plugin-prettier/recommended";
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTs from 'eslint-config-next/typescript';
+import prettierRecommended from 'eslint-plugin-prettier/recommended';
 
 export default defineConfig([
   ...nextVitals,
@@ -9,8 +9,8 @@ export default defineConfig([
   prettierRecommended,
   {
     rules: {
-      "object-curly-newline": [
-        "error",
+      'object-curly-newline': [
+        'error',
         {
           ObjectExpression: {
             multiline: true,
@@ -19,25 +19,25 @@ export default defineConfig([
           },
         },
       ],
-      "padding-line-between-statements": [
-        "error",
+      'padding-line-between-statements': [
+        'error',
         {
-          blankLine: "always",
-          prev: "import",
-          next: "*",
+          blankLine: 'always',
+          prev: 'import',
+          next: '*',
         },
         {
-          blankLine: "any",
-          prev: "import",
-          next: "import",
+          blankLine: 'any',
+          prev: 'import',
+          next: 'import',
         },
         {
-          blankLine: "always",
-          prev: "*",
-          next: "export",
+          blankLine: 'always',
+          prev: '*',
+          next: 'export',
         },
       ],
     },
   },
-  globalIgnores([".next/**", "out/**", "next-env.d.ts"]),
+  globalIgnores(['.next/**', 'out/**', 'next-env.d.ts']),
 ]);

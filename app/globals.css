@@ -28,7 +28,7 @@ body {
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    "Segoe UI",
+    'Segoe UI',
     sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
